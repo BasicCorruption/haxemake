@@ -1,0 +1,6 @@
+/"src",cp
+/"Main",m
+.lib:"Console.hx"
+.lib:"kglog"
+/"bin/cpp",op
+-cpp
