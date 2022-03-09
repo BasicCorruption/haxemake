@@ -1,0 +1,8 @@
+bin/
+*.exe
+*.dll
+*.ndll
+*.out
+*.n
+*.o
+*.tmp
