@@ -15,6 +15,7 @@ class Parser {
 
 	static var tmp1:StringBuf;
 	static var tmp2:Array<StringBuf>;
+	static var tmp3:Array<StringBuf>;
 
 	public static function parse(fp:String) {
 		if (!FileSystem.exists(fp)) {
@@ -47,7 +48,19 @@ class Parser {
 						case "op":
 							cv.op = tmp2[i];
 					}
-				}
+				} else if (v.charAt(0) == ".") {
+					var t = v.substring(6);
+					for (p in 0.t.length) {
+						if (t.charAt(p) != "\"") {
+							tmp1.addChar(p);
+						} else {
+							tmp3[i] = tmp1;
+							tmp1 = "";
+							break;
+						}
+					}
+					FileUtil.append("-lib " + tmp3[i]);
+				} else if (v.charAt(0) == "-") {}
 			}
 		}
 	}
