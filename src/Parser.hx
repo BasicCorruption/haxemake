@@ -23,10 +23,12 @@ class Parser {
 		} else {
 			fc = File.getContent(fp);
 
+			trace("Splitting lines");
 			lines = fc.split("\n");
 			lc = lines.length;
 
 			for (i => v in lines) {
+				trace("Scanning line " + i);
 				if (v.charAt(0) == "/") {
 					var t = v;
 					t.substring(2);
