@@ -33,10 +33,15 @@ class Parser {
 						if (t.charAt(p) != "\"") {
 							tmp1.addChar(p);
 						} else {
-							tmp2[0] = tmp1;
+							tmp2[i] = tmp1;
 							tmp1 = "";
 							break;
 						}
+					}
+					var l = t.substring(tmp2[i].length + 1);
+					switch (l) {
+						case "cp":
+							// do this later
 					}
 				}
 			}
