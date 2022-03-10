@@ -14,6 +14,7 @@ class Parser {
 	static var cv = {};
 
 	static var tmp1:StringBuf;
+	static var tmp2 = {};
 
 	public static function parse(fp:String) {
 		if (!FileSystem.exists(fp)) {
