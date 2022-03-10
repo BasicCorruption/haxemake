@@ -8,5 +8,6 @@ class Main {
 
 	public static function main() {
 		FileUtil.generate(args[0]);
+		Parser.parse(args[0]);
 	}
 }
