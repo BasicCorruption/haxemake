@@ -14,10 +14,20 @@ class FileUtil {
     hxml = Path.join([dir, "build.hxml"]);
     switch (FileSystem.exists(hxml)) {
       case true:
+        content = "";
         File.saveContent(hxml, "");
       case false:
+        content = "";
         File.saveContent(hxml, "");
     }
   }
-  public static function append(text:String) {}
+  public static function append(text:String) {
+    content = content + text;
+  }
+  public static function appendln(text:String) {
+    content = content + "\n" + text;
+  }
+  public static function save() {
+    File.saveContent(hxml, content);
+  }
 }
