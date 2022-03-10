@@ -6,5 +6,7 @@ class Main {
 	public static var args = Sys.args();
 	public static var dir = Sys.command("cd");
 
-	public static function main() {}
+	public static function main() {
+		FileUtil.generate(args[0]);
+	}
 }
