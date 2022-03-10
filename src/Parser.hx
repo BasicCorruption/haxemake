@@ -41,7 +41,11 @@ class Parser {
 					var l = t.substring(tmp2[i].length + 1);
 					switch (l) {
 						case "cp":
-							// do this later
+							FileUtil.append("--class-path " + tmp2[i]);
+						case "m":
+							FileUtil.append("--main " + tmp2[i]);
+						case "op":
+							cv.op = tmp2[i];
 					}
 				}
 			}
