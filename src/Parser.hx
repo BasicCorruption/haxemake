@@ -33,6 +33,8 @@ class Parser {
 						if (t.charAt(p) != "\"") {
 							tmp1.addChar(p);
 						} else {
+							tmp2[0] = tmp1;
+							tmp1 = "";
 							break;
 						}
 					}
