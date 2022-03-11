@@ -65,7 +65,11 @@ class Parser {
 						}
 					}
 					FileUtil.append("-lib " + tmp3[i]);
-				} else if (v.charAt(0) == "-") {}
+				} else if (v.charAt(0) == "-") {
+					var t = v.substring(1);
+					cv.c = t;
+				}
+				FileUtil.append("-" + cv.c + " " + cv.op);
 			}
 		}
 	}
