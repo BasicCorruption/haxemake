@@ -11,11 +11,14 @@ class Parser {
 	static var lines:Array<String>;
 	static var lc:Int;
 
-	static var cv = {};
+	static var cv = {
+		op: "",
+		c: ""
+	};
 
-	static var tmp1:StringBuf;
-	static var tmp2:Array<StringBuf>;
-	static var tmp3:Array<StringBuf>;
+	static var tmp1:String;
+	static var tmp2:Array<String>;
+	static var tmp3:Array<String>;
 
 	public static function parse(fp:String) {
 		if (!FileSystem.exists(fp)) {
@@ -34,7 +37,7 @@ class Parser {
 					t.substring(2);
 					for (p in 0...t.length) {
 						if (t.charAt(p) != "\"") {
-							tmp1.addChar(p);
+							tmp1 = tmp1 + p;
 						} else {
 							tmp2[i] = tmp1;
 							tmp1 = "";
@@ -52,9 +55,9 @@ class Parser {
 					}
 				} else if (v.charAt(0) == ".") {
 					var t = v.substring(6);
-					for (p in 0.t.length) {
+					for (p in 0...t.length) {
 						if (t.charAt(p) != "\"") {
-							tmp1.addChar(p);
+							tmp1 = tmp1 + p;
 						} else {
 							tmp3[i] = tmp1;
 							tmp1 = "";
