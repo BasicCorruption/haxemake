@@ -70,6 +70,7 @@ class Parser {
 					cv.c = t;
 				}
 				FileUtil.append("-" + cv.c + " " + cv.op);
+				FileUtil.save();
 			}
 		}
 	}
